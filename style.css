@@ -1,0 +1,276 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Rancho', sans-serif;
+    width: 100%;
+}
+
+nav {
+   width: 100%;
+   background-color: #B00;
+
+   padding: 1em 2em;
+   position: fixed;
+   top: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+i {
+    font-size: 2rem;
+}
+
+ul {
+    padding: 0;
+    height: 100%;
+    width: 20em;
+    display: flex;
+    align-items: center;
+    
+}
+
+
+li {
+    list-style: none;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+li:hover {
+    background: #00C;
+}
+
+.container a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    height: 100%;
+}
+
+.container .logo p {
+    font-weight: bold;
+    font-size: 2rem;
+ }
+
+.container .logo i {
+    margin-right: .2em;
+}
+
+#welcome-section {
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    background: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome-section .name {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+#welcome-section .description {
+    color: #B00;
+    font-size: 2.5rem;
+}
+
+#projects {
+    width: 100%;
+    height: 100%;
+    background: #4580FA;
+    color: #fff;
+    text-align: center;
+    padding: 4em;
+}
+
+#projects h2 {
+    font-size: 3rem;
+    text-decoration: underline;
+    /* permet d'espacer la underline du texte qu'elle
+    souligne*/
+    text-underline-offset: .25em;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    margin: 3em auto;
+}
+
+.box {
+    background: #333;
+    padding-bottom: .5em;
+    text-align: center;
+    border-radius: 5px;
+}
+
+img {
+    width: 100%;
+}
+
+#projects img {
+    max-width: 400px;
+}
+
+#projects p {
+    width: 100%;
+    max-width: 400px;
+}
+
+#projects p::before {
+    content: '< ';
+    color: #333;
+}
+
+#projects p::after {
+    content: ' />';
+    color: #333;
+}
+
+#projects p:hover::before {
+    color: #fa0;
+ }
+
+#projects p:hover::after {
+   color: #fa0;
+}
+
+#projects a {
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+button  {
+    font-family: 'Rancho', sans-serif;
+    background: #333;
+    color: #fff;
+    padding: .5em;
+    border-radius: 5px;
+    border: none;
+}
+
+button ::after {
+    content: ' >';
+}
+
+#contact {
+    background: #333;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 15em;
+    line-height: 1.2;
+}
+
+#contact h2 {
+    font-size: 5rem;
+}
+
+#contact span {
+    font-size: 4rem;
+}
+
+#contact p {
+    font-size: 2rem;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+#contact ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2em auto;
+}
+
+#contact li {
+    margin: 0 ;
+    width: 60%;
+    background: none;
+}
+
+#contact a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+}
+
+#contact i {
+    margin-right: .25em;
+}
+
+footer {
+    width: 100%;
+    background: #333;
+    border-top: 1px solid #B00;
+}
+
+.foot-container {
+    width: 80%;
+    margin: 0 auto;
+    color: #fff;
+    padding: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foot-container p {
+    font-size: 1.5rem;
+}
+
+.foot-container i {
+    font-size: 1rem;
+    margin-inline: .5em;
+}
+
+@media (max-width:700px) {
+    nav .container {
+        flex-direction: column;
+        line-height: 1.5;
+    }
+
+    #contact {
+        flex-direction: column;
+        padding: 2em;
+        text-align: center;
+    }
+
+    #contact ul {
+        display: block;
+        line-height: 1.5;
+    }
+
+    .foot-container {
+        flex-direction: column;
+        text-align: center;
+        line-height: 1.75;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+   
+}
+
+
+ 
